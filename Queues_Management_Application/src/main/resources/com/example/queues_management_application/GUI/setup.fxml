@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="609.0" prefWidth="815.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.queues_management_application.GUI.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <SplitPane dividerPositions="0.26809954751131215" orientation="VERTICAL" prefHeight="588.0" prefWidth="802.0">
+     <items>
+       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="285.0" prefWidth="807.0" style="-fx-background-color: #006a4e;">
+            <children>
+               <Label layoutX="214.0" layoutY="26.0" prefHeight="86.0" prefWidth="423.0" text="Queues Management System" textFill="WHITE">
+                  <font>
+                     <Font size="27.0" />
+                  </font>
+               </Label>
+               <CubicCurve controlX1="-184.0" controlX2="-87.19998168945312" controlY1="-138.39999389648438" controlY2="63.19999694824219" endX="300.800048828125" endY="-25.600006103515625" fill="#f6f9fc" layoutX="288.0" layoutY="112.0" startX="-137.60000610351562" startY="-6.4000091552734375" stroke="BLACK" />
+            </children>
+         </AnchorPane>
+       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="408.0" prefWidth="774.0" style="-fx-background-color: #f5fffa;">
+            <children>
+               <Label layoutX="55.0" layoutY="45.0" prefHeight="42.0" prefWidth="163.0" text="Number of clients:">
+                  <font>
+                     <Font name="Times New Roman" size="20.0" />
+                  </font>
+               </Label>
+               <Label layoutX="55.0" layoutY="85.0" prefHeight="42.0" prefWidth="163.0" text="Number of queues:">
+                  <font>
+                     <Font name="Times New Roman" size="20.0" />
+                  </font>
+               </Label>
+               <Label layoutX="55.0" layoutY="125.0" prefHeight="42.0" prefWidth="163.0" text="Simulation interval:">
+                  <font>
+                     <Font name="Times New Roman" size="20.0" />
+                  </font>
+               </Label>
+               <Label layoutX="55.0" layoutY="165.0" prefHeight="42.0" prefWidth="306.0" text="Minimum and maximum time arrival:">
+                  <font>
+                     <Font name="Times New Roman" size="20.0" />
+                  </font>
+               </Label>
+               <Label layoutX="55.0" layoutY="205.0" prefHeight="42.0" prefWidth="314.0" text="Minimum and maximum service time:" textFill="#000000de">
+                  <font>
+                     <Font name="Times New Roman" size="20.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="nrClients" layoutX="212.0" layoutY="51.0" prefHeight="30.0" prefWidth="129.0" promptText="Number of clients" />
+               <TextField fx:id="nrQueues" layoutX="212.0" layoutY="91.0" prefHeight="30.0" prefWidth="129.0" promptText="Number of queues" />
+               <TextField fx:id="simulationInterval" layoutX="218.0" layoutY="131.0" prefHeight="30.0" prefWidth="129.0" promptText="Simulation interval:" />
+               <TextField fx:id="minTa" layoutX="369.0" layoutY="171.0" prefHeight="30.0" prefWidth="129.0" promptText="Minimum" />
+               <TextField fx:id="maxTa" layoutX="517.0" layoutY="171.0" prefHeight="30.0" prefWidth="129.0" promptText="Maximum" />
+               <TextField fx:id="minSt" layoutX="369.0" layoutY="211.0" prefHeight="30.0" prefWidth="129.0" promptText="Minimum" />
+               <TextField fx:id="maxSt" layoutX="517.0" layoutY="211.0" prefHeight="30.0" prefWidth="129.0" promptText="Maximum" />
+               <Button fx:id="validateInput" layoutX="309.0" layoutY="283.0" mnemonicParsing="false" onAction="#validateInput_onAction" prefHeight="42.0" prefWidth="138.0" style="-fx-background-color: #006a4e;" text="Validate Input" textFill="WHITE">
+                  <font>
+                     <Font name="Times New Roman" size="19.0" />
+                  </font>
+               </Button>
+               <Label fx:id="errorLabel" layoutX="119.0" layoutY="339.0" prefHeight="20.0" prefWidth="561.0" textFill="#f70b0b">
+                  <font>
+                     <Font name="Times New Roman" size="18.0" />
+                  </font>
+               </Label>
+            </children>
+         </AnchorPane>
+     </items>
+   </SplitPane>
+
+    <Label fx:id="welcomeText" />
+</VBox>
